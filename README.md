@@ -1,4 +1,4 @@
-RISC-V GNU Compiler Toolchain
+﻿RISC-V GNU Compiler Toolchain
 =============================
 
 This is the RISC-V C and C++ cross-compiler. It supports two build modes:

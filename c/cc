@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [[ $1 == "n" ]]
+then
+  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc main.c -S -fdump-tree-all -fdump-rtl-all -O3 -o n/main.s
+elif [[ $1 == "v" ]]
+then
+  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc main.c -march=rv32gcv -S -fdump-tree-all -fdump-rtl-all -O3 -o v/main.s
+elif [[ $1 == "ng" ]]
+then
+  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc main.c -S -O3 -o n/main.s -wrapper gdbgui,--args
+elif [[ $1 == "vg" ]]
+then
+  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc main.c -S -O3 -o v/main.s -march=rv32gcv -wrapper gdbgui,--args
+else
+  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc main.c -S -O3 -o n/main.s
+  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc main.c -march=rv32gcv -S -O3 -o v/main.s
+fi
