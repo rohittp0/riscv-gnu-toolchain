@@ -8,3 +8,7 @@ Makefile
 /build-*/
 /install-newlib-nano/
 /stamps/
+
+**/*ChangeLog*
+.idea/
+/c/
