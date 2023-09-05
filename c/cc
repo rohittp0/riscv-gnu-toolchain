@@ -1,5 +1,8 @@
 #!/bin/bash
 
+rm -r n v
+mkdir -p n v
+
 if [[ $1 == "n" ]]
 then
   ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc main.c -S -fdump-tree-all -fdump-rtl-all -O3 -o n/main.s
