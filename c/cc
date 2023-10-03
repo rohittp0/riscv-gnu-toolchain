@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -r n v
+rm -rf n v
 mkdir -p n v
 
 if [[ $1 == "n" ]]
