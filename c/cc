@@ -3,7 +3,7 @@
 rm -rf n v
 mkdir -p n v
 
-n_args="main.c -S -fno-schedule-insns -fno-schedule-insns2 -O3 -o n/main.s"
+n_args="main.c -S -O3 -o n/main.s"
 v_args="main.c -S -O3 -o v/main.s -march=rv32gcv"
 
 if [[ $1 == "n" ]]
