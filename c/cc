@@ -3,19 +3,22 @@
 rm -rf n v
 mkdir -p n v
 
+n_args="main.c -S -fno-schedule-insns -fno-schedule-insns2 -O3 -o n/main.s"
+v_args="main.c -S -O3 -o v/main.s -march=rv32gcv"
+
 if [[ $1 == "n" ]]
 then
-  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc main.c -S -fdump-tree-all -fdump-rtl-all -O3 -o n/main.s
+  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc -fdump-tree-all -fdump-rtl-all $n_args
 elif [[ $1 == "v" ]]
 then
-  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc main.c -march=rv32gcv -S -fdump-tree-all -fdump-rtl-all -O3 -o v/main.s
+  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc -fdump-tree-all -fdump-rtl-all $v_args
 elif [[ $1 == "ng" ]]
 then
-  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc main.c -S -O3 -o n/main.s -wrapper gdbgui,--args
+  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc $n_args -wrapper gdbgui,--args
 elif [[ $1 == "vg" ]]
 then
-  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc main.c -S -O3 -o v/main.s -march=rv32gcv -wrapper gdbgui,--args
+  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc $v_args -wrapper gdbgui,--args
 else
-  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc main.c -S -O3 -o n/main.s
-  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc main.c -march=rv32gcv -S -O3 -o v/main.s
+  ~/build/gcc/bin/riscv32-unknown-linux-gnu-gcc $n_args
+  ~/build/gccv/bin/riscv32-unknown-linux-gnu-gcc $v_args
 fi
