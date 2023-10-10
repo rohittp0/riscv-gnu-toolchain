@@ -1,5 +1,6 @@
 void vector_add(int  *a, int *b) {
     for (int i = 0; i < 4; i++) {
-        a[i] += b[i];
+        a[i] += 1;
+        b[i] += 1;
     }
 }
