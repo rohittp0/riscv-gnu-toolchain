@@ -1,0 +1,86 @@
+
+;; Function vector_add (vector_add, funcdef_no=0, decl_uid=1454, cgraph_uid=1, symbol_order=0)
+
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 1 }
+
+SSA replacement table
+N_i -> { O_1 ... O_j } means that N_i replaces O_1, ..., O_j
+
+_15 -> { _3 }
+i_16 -> { i_8 }
+Incremental SSA update started at block: 4
+Number of blocks in CFG: 6
+Number of blocks to update: 2 ( 33%)
+
+
+
+Value ranges after VRP:
+
+i.0_1: unsigned int [0, 3]
+_2: unsigned int [0, 12]
+_3: int * VARYING
+_4: int VARYING
+_5: int * VARYING
+_6: int VARYING
+_7: int VARYING
+i_8: int [0, 4]
+.MEM_9: <<< error >>> VARYING
+a_11(D): int * VARYING
+b_12(D): int * VARYING
+i_14: int [1, 4]
+_15: int * [1B, +INF]  EQUIVALENCES: { _3 } (1 elements)
+i_16: int [0, 3]  EQUIVALENCES: { i_8 } (1 elements)
+
+
+void vector_add (int * a, int * b)
+{
+  int i;
+  unsigned int i.0_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int * _5;
+  int _6;
+  int _7;
+
+  <bb 2> [local count: 214748368]:
+  goto <bb 4>; [100.00%]
+
+  <bb 3> [local count: 858993457]:
+  i.0_1 = (unsigned int) i_8;
+  _2 = i.0_1 * 4;
+  _3 = a_11(D) + _2;
+  _4 = *_3;
+  _5 = b_12(D) + _2;
+  _6 = *_5;
+  _7 = _4 + _6;
+  *_3 = _7;
+  i_14 = i_8 + 1;
+
+  <bb 4> [local count: 1073741824]:
+  # i_8 = PHI <0(2), i_14(3)>
+  if (i_8 != 4)
+    goto <bb 3>; [80.00%]
+  else
+    goto <bb 5>; [20.00%]
+
+  <bb 5> [local count: 214748368]:
+  return;
+
+}
+
+

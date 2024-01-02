@@ -1,0 +1,115 @@
+
+;; Function vector_add (vector_add, funcdef_no=0, decl_uid=1454, cgraph_uid=1, symbol_order=0)
+
+
+
+try_optimize_cfg iteration 1
+
+
+
+try_optimize_cfg iteration 1
+
+Reordered sequence:
+ 2 bb 2
+
+
+vector_add
+
+Dataflow summary:
+;;  fully invalidated by EH 	 0 [zero] 3 [gp] 4 [tp] 5 [t0] 6 [t1] 7 [t2] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 28 [t3] 29 [t4] 30 [t5] 31 [t6] 32 [ft0] 33 [ft1] 34 [ft2] 35 [ft3] 36 [ft4] 37 [ft5] 38 [ft6] 39 [ft7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7] 60 [ft8] 61 [ft9] 62 [ft10] 63 [ft11]
+;;  hardware regs used 	 2 [sp]
+;;  regular block artificial uses 	 2 [sp]
+;;  eh block artificial uses 	 2 [sp] 64 [arg]
+;;  entry block defs 	 1 [ra] 2 [sp] 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7] 42 [fa0] 43 [fa1] 44 [fa2] 45 [fa3] 46 [fa4] 47 [fa5] 48 [fa6] 49 [fa7]
+;;  exit block uses 	 1 [ra] 2 [sp]
+;;  regs ever live 	 10 [a0] 11 [a1] 12 [a2] 13 [a3] 14 [a4] 15 [a5] 16 [a6] 17 [a7]
+;;  ref usage 	r1={1d,1u} r2={1d,2u} r10={1d,5u,4e} r11={1d,4u,3e} r12={3d,2u} r13={3d,3u} r14={4d,3u} r15={3d,5u} r16={1d,1u} r17={1d,1u} r42={1d} r43={1d} r44={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} 
+;;    total ref usage 61{27d,27u,7e} in 14{14 regular + 0 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 36 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 36 5 30 2 (set (reg:SI 14 a4)
+        (unspec:SI [
+                (mem:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84]) [1 *a_11(D)+0 S4 A32])
+                (reg:SI 15 a5)
+                (reg:SI 16 a6)
+                (reg:SI 17 a7)
+            ] UNSPEC_VLE)) 272 {vle}
+     (expr_list:REG_DEAD (reg:SI 17 a7)
+        (expr_list:REG_DEAD (reg:SI 16 a6)
+            (nil))))
+(note 30 36 4 2 NOTE_INSN_PROLOGUE_END)
+(note 4 30 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 4 9 2 (set (reg:SI 12 a2 [orig:88 *b_12(D) ] [88])
+        (mem:SI (reg/v/f:SI 11 a1 [orig:85 b ] [85]) [1 *b_12(D)+0 S4 A32])) "o.c":3:14 136 {*movsi_internal}
+     (expr_list:REG_EQUIV (mem:SI (reg/v/f:SI 11 a1 [orig:85 b ] [85]) [1 *b_12(D)+0 S4 A32])
+        (nil)))
+(insn 9 8 10 2 (set (reg:SI 15 a5 [86])
+        (plus:SI (reg:SI 14 a4)
+            (reg:SI 12 a2 [orig:88 *b_12(D) ] [88]))) "o.c":3:14 3 {addsi3}
+     (expr_list:REG_DEAD (reg:SI 12 a2 [orig:88 *b_12(D) ] [88])
+        (expr_list:REG_EQUIV (mem:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84]) [1 *a_11(D)+0 S4 A32])
+            (nil))))
+(insn 10 9 12 2 (set (mem:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84]) [1 *a_11(D)+0 S4 A32])
+        (reg:SI 15 a5 [86])) "o.c":3:14 136 {*movsi_internal}
+     (nil))
+(insn 12 10 13 2 (set (reg:SI 12 a2 [orig:91 MEM[(int *)b_12(D) + 4B] ] [91])
+        (mem:SI (plus:SI (reg/v/f:SI 11 a1 [orig:85 b ] [85])
+                (const_int 4 [0x4])) [1 MEM[(int *)b_12(D) + 4B]+0 S4 A32])) "o.c":3:14 136 {*movsi_internal}
+     (expr_list:REG_EQUIV (mem:SI (plus:SI (reg/v/f:SI 11 a1 [orig:85 b ] [85])
+                (const_int 4 [0x4])) [1 MEM[(int *)b_12(D) + 4B]+0 S4 A32])
+        (nil)))
+(insn 13 12 14 2 (set (reg:SI 13 a3 [89])
+        (plus:SI (reg:SI 15 a5)
+            (reg:SI 12 a2 [orig:91 MEM[(int *)b_12(D) + 4B] ] [91]))) "o.c":3:14 3 {addsi3}
+     (expr_list:REG_DEAD (reg:SI 12 a2 [orig:91 MEM[(int *)b_12(D) + 4B] ] [91])
+        (expr_list:REG_EQUIV (mem:SI (plus:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84])
+                    (const_int 4 [0x4])) [1 MEM[(int *)a_11(D) + 4B]+0 S4 A32])
+            (nil))))
+(insn 14 13 16 2 (set (mem:SI (plus:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84])
+                (const_int 4 [0x4])) [1 MEM[(int *)a_11(D) + 4B]+0 S4 A32])
+        (reg:SI 13 a3 [89])) "o.c":3:14 136 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 13 a3 [89])
+        (nil)))
+(insn 16 14 17 2 (set (reg:SI 13 a3 [orig:94 MEM[(int *)b_12(D) + 8B] ] [94])
+        (mem:SI (plus:SI (reg/v/f:SI 11 a1 [orig:85 b ] [85])
+                (const_int 8 [0x8])) [1 MEM[(int *)b_12(D) + 8B]+0 S4 A32])) "o.c":3:14 136 {*movsi_internal}
+     (expr_list:REG_EQUIV (mem:SI (plus:SI (reg/v/f:SI 11 a1 [orig:85 b ] [85])
+                (const_int 8 [0x8])) [1 MEM[(int *)b_12(D) + 8B]+0 S4 A32])
+        (nil)))
+(insn 17 16 18 2 (set (reg:SI 14 a4 [92])
+        (plus:SI (reg:SI 16 a6)
+            (reg:SI 13 a3 [orig:94 MEM[(int *)b_12(D) + 8B] ] [94]))) "o.c":3:14 3 {addsi3}
+     (expr_list:REG_DEAD (reg:SI 13 a3 [orig:94 MEM[(int *)b_12(D) + 8B] ] [94])
+        (expr_list:REG_EQUIV (mem:SI (plus:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84])
+                    (const_int 8 [0x8])) [1 MEM[(int *)a_11(D) + 8B]+0 S4 A32])
+            (nil))))
+(insn 18 17 20 2 (set (mem:SI (plus:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84])
+                (const_int 8 [0x8])) [1 MEM[(int *)a_11(D) + 8B]+0 S4 A32])
+        (reg:SI 14 a4 [92])) "o.c":3:14 136 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 14 a4 [92])
+        (nil)))
+(insn 20 18 21 2 (set (reg:SI 14 a4 [orig:97 MEM[(int *)b_12(D) + 12B] ] [97])
+        (mem:SI (plus:SI (reg/v/f:SI 11 a1 [orig:85 b ] [85])
+                (const_int 12 [0xc])) [1 MEM[(int *)b_12(D) + 12B]+0 S4 A32])) "o.c":3:14 136 {*movsi_internal}
+     (expr_list:REG_DEAD (reg/v/f:SI 11 a1 [orig:85 b ] [85])
+        (nil)))
+(insn 21 20 22 2 (set (reg:SI 15 a5 [95])
+        (plus:SI (reg:SI 17 a7)
+            (reg:SI 14 a4 [orig:97 MEM[(int *)b_12(D) + 12B] ] [97]))) "o.c":3:14 3 {addsi3}
+     (expr_list:REG_DEAD (reg:SI 14 a4 [orig:97 MEM[(int *)b_12(D) + 12B] ] [97])
+        (expr_list:REG_EQUIV (mem:SI (plus:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84])
+                    (const_int 12 [0xc])) [1 MEM[(int *)a_11(D) + 12B]+0 S4 A32])
+            (nil))))
+(insn 22 21 31 2 (set (mem:SI (plus:SI (reg/v/f:SI 10 a0 [orig:84 a ] [84])
+                (const_int 12 [0xc])) [1 MEM[(int *)a_11(D) + 12B]+0 S4 A32])
+        (reg:SI 15 a5 [95])) "o.c":3:14 136 {*movsi_internal}
+     (expr_list:REG_DEAD (reg:SI 15 a5 [95])
+        (expr_list:REG_DEAD (reg/v/f:SI 10 a0 [orig:84 a ] [84])
+            (nil))))
+(note 31 22 32 2 NOTE_INSN_EPILOGUE_BEG)
+(jump_insn 32 31 33 2 (simple_return) "o.c":5:1 246 {simple_return}
+     (nil)
+ -> simple_return)
+(barrier 33 32 27)
+(note 27 33 28 NOTE_INSN_DELETED)
+(note 28 27 0 NOTE_INSN_DELETED)

@@ -1,0 +1,50 @@
+
+;; Function vector_add (vector_add, funcdef_no=0, decl_uid=1454, cgraph_uid=1, symbol_order=0)
+
+pointer_query counters:
+  index cache size:   0
+  index entries:      0
+  access cache size:  0
+  access entries:     0
+  hits:               0
+  misses:             0
+  failures:           0
+  max_depth:          0
+void vector_add (int * a, int * b)
+{
+  int i;
+  int _4;
+  int _6;
+  int _7;
+  int _8;
+  int _15;
+  int _26;
+  int _36;
+  int _38;
+  int _39;
+  int _49;
+  int _51;
+  int _52;
+
+  <bb 2> [local count: 214748371]:
+  _15 = *a_11(D);
+  _8 = *b_12(D);
+  _26 = _8 + _15;
+  *a_11(D) = _26;
+  _36 = MEM[(int *)a_11(D) + 4B];
+  _38 = MEM[(int *)b_12(D) + 4B];
+  _39 = _36 + _38;
+  MEM[(int *)a_11(D) + 4B] = _39;
+  _49 = MEM[(int *)a_11(D) + 8B];
+  _51 = MEM[(int *)b_12(D) + 8B];
+  _52 = _49 + _51;
+  MEM[(int *)a_11(D) + 8B] = _52;
+  _4 = MEM[(int *)a_11(D) + 12B];
+  _6 = MEM[(int *)b_12(D) + 12B];
+  _7 = _4 + _6;
+  MEM[(int *)a_11(D) + 12B] = _7;
+  return;
+
+}
+
+

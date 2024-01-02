@@ -1,0 +1,67 @@
+39 ccp "Statements deleted" "vector_add" 1
+44 fre "RPO num avail == 9" "vector_add" 1
+44 fre "RPO blocks" "vector_add" 4
+44 fre "RPO num lattice == 18" "vector_add" 1
+44 fre "RPO blocks visited" "vector_add" 6
+44 fre "RPO iterations == 15" "vector_add" 1
+44 fre "RPO num values == 18" "vector_add" 1
+44 fre "RPO blocks executable" "vector_add" 4
+44 fre "RPO block visited times == 1" "vector_add" 2
+44 fre "RPO block visited times == 2" "vector_add" 2
+44 fre "Eliminated" "vector_add" 5
+45 evrp "Statements folded" "vector_add" 1
+58 release_ssa "SSA names released" "vector_add" 6
+58 release_ssa "SSA name holes removed" "vector_add" 6
+117 fre "RPO num avail == 9" "vector_add" 1
+117 fre "RPO blocks" "vector_add" 4
+117 fre "RPO num lattice == 13" "vector_add" 1
+117 fre "RPO blocks visited" "vector_add" 6
+117 fre "RPO iterations == 15" "vector_add" 1
+117 fre "RPO num values == 13" "vector_add" 1
+117 fre "RPO blocks executable" "vector_add" 4
+117 fre "RPO block visited times == 1" "vector_add" 2
+117 fre "RPO block visited times == 2" "vector_add" 2
+120 vrp "Incremental SSA update" "vector_add" 1
+120 vrp "Number of ASSERT_EXPR expressions inserted" "vector_add" 2
+131 ch "RPO num values == 2" "vector_add" 1
+131 ch "RPO blocks" "vector_add" 2
+131 ch "RPO iterations == 10" "vector_add" 1
+131 ch "Incremental SSA update" "vector_add" 1
+131 ch "RPO blocks visited" "vector_add" 2
+131 ch "RPO blocks executable" "vector_add" 2
+131 ch "RPO block visited times == 1" "vector_add" 2
+131 ch "RPO num avail == 0" "vector_add" 1
+131 ch "RPO num lattice == 2" "vector_add" 1
+131 ch "Eliminated" "vector_add" 1
+148 pre "RPO num avail == 9" "vector_add" 1
+148 pre "RPO blocks" "vector_add" 4
+148 pre "RPO num lattice == 13" "vector_add" 1
+148 pre "compute_antic iterations == 2" "vector_add" 1
+148 pre "RPO blocks visited" "vector_add" 6
+148 pre "RPO iterations == 15" "vector_add" 1
+148 pre "RPO num values == 13" "vector_add" 1
+148 pre "RPO blocks executable" "vector_add" 4
+148 pre "RPO block visited times == 1" "vector_add" 2
+148 pre "RPO block visited times == 2" "vector_add" 2
+148 pre "insert iterations == 1" "vector_add" 1
+180 cunroll "Incremental SSA update" "vector_add" 1
+181 fre "RPO blocks" "vector_add" 1
+181 fre "RPO iterations == 10" "vector_add" 1
+181 fre "RPO blocks visited" "vector_add" 1
+181 fre "RPO num avail == 18" "vector_add" 1
+181 fre "RPO num values == 42" "vector_add" 1
+181 fre "RPO blocks executable" "vector_add" 1
+181 fre "RPO block visited times == 1" "vector_add" 1
+181 fre "RPO num lattice == 42" "vector_add" 1
+181 fre "Eliminated" "vector_add" 15
+183 slp "SLP optimize perm iterations == 3" "vector_add" 1
+198 fre "RPO blocks" "vector_add" 1
+198 fre "RPO iterations == 10" "vector_add" 1
+198 fre "RPO blocks visited" "vector_add" 1
+198 fre "RPO num avail == 18" "vector_add" 1
+198 fre "RPO num lattice == 24" "vector_add" 1
+198 fre "RPO blocks executable" "vector_add" 1
+198 fre "RPO block visited times == 1" "vector_add" 1
+198 fre "RPO num values == 24" "vector_add" 1
+203 vrp "Statements folded" "vector_add" 1
+215 dce "Statements deleted" "vector_add" 3

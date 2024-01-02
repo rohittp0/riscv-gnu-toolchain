@@ -1,0 +1,20 @@
+
+;; Function vector_add (null)
+;; enabled by -tree-original
+
+
+{
+  {
+    int i = 0;
+
+        int i = 0;
+    goto <D.1460>;
+    <D.1459>:;
+    *(a + (sizetype) ((unsigned int) i * 4)) = *(a + (sizetype) ((unsigned int) i * 4)) + *(b + (sizetype) ((unsigned int) i * 4));
+    i++ ;
+    <D.1460>:;
+    if (i <= 3) goto <D.1459>; else goto <D.1457>;
+    <D.1457>:;
+  }
+}
+

@@ -1,0 +1,66 @@
+
+;; Function vector_add (vector_add, funcdef_no=0, decl_uid=1454, cgraph_uid=1, symbol_order=0)
+
+;; 2 loops found
+;;
+;; Loop 0
+;;  header 0, latch 1
+;;  depth 0, outer -1
+;;  nodes: 0 1 2 3 4 5
+;;
+;; Loop 1
+;;  header 4, latch 3
+;;  depth 1, outer 0
+;;  nodes: 4 3
+;; 2 succs { 4 }
+;; 3 succs { 4 }
+;; 4 succs { 3 5 }
+;; 5 succs { 1 }
+void vector_add (int * a, int * b)
+{
+  int i;
+  unsigned int i.0_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  unsigned int i.1_5;
+  unsigned int _6;
+  int * _7;
+  int _8;
+  unsigned int i.2_9;
+  unsigned int _10;
+  int * _11;
+  int _12;
+
+  <bb 2> :
+  goto <bb 4>; [INV]
+
+  <bb 3> :
+  i.0_1 = (unsigned int) i_13;
+  _2 = i.0_1 * 4;
+  _3 = a_17(D) + _2;
+  _4 = *_3;
+  i.1_5 = (unsigned int) i_13;
+  _6 = i.1_5 * 4;
+  _7 = b_18(D) + _6;
+  _8 = *_7;
+  i.2_9 = (unsigned int) i_13;
+  _10 = i.2_9 * 4;
+  _11 = a_17(D) + _10;
+  _12 = _4 + _8;
+  *_11 = _12;
+  i_20 = i_13 + 1;
+
+  <bb 4> :
+  # i_13 = PHI <0(2), i_20(3)>
+  if (i_13 <= 3)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 5> :
+  return;
+
+}
+
+

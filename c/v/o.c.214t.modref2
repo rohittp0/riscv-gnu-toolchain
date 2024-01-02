@@ -1,0 +1,179 @@
+
+;; Function vector_add (vector_add, funcdef_no=0, decl_uid=1454, cgraph_uid=1, symbol_order=0)
+
+
+
+modref analyzing 'vector_add/0' (ipa=0)
+Past summary:
+  loads:
+      Base 0: alias set 1
+        Ref 0: alias set 1
+          access: Parm 0
+          access: Parm 1
+  stores:
+      Base 0: alias set 1
+        Ref 0: alias set 1
+          access: Parm 0
+  parm 0 flags: no_direct_escape
+  parm 1 flags: no_direct_clobber no_direct_escape
+Analyzing flags of ssa name: a_11(D)
+  Analyzing stmt: MEM[(int *)a_11(D) + 12B] = _7;
+  current flags of a_11(D) no_indirect_clobber no_direct_escape no_indirect_escape not_returned_directly not_returned_indirectly no_direct_read no_indirect_read
+  Analyzing stmt: _4 = MEM[(int *)a_11(D) + 12B];
+    Analyzing flags of ssa name: _4
+      Analyzing stmt: _7 = _4 + _6;
+        Analyzing flags of ssa name: _7
+          Analyzing stmt: MEM[(int *)a_11(D) + 12B] = _7;
+          ssa name saved to memory
+          current flags of _7
+        flags of ssa name _7
+      current flags of _4
+    flags of ssa name _4
+  current flags of a_11(D) no_direct_escape not_returned_directly
+  Analyzing stmt: _49 = MEM[(int *)a_11(D) + 8B];
+    Analyzing flags of ssa name: _49
+      Analyzing stmt: _52 = _49 + _51;
+        Analyzing flags of ssa name: _52
+          Analyzing stmt: MEM[(int *)a_11(D) + 8B] = _52;
+          ssa name saved to memory
+          current flags of _52
+        flags of ssa name _52
+      current flags of _49
+    flags of ssa name _49
+  current flags of a_11(D) no_direct_escape not_returned_directly
+  Analyzing stmt: MEM[(int *)a_11(D) + 8B] = _52;
+  current flags of a_11(D) no_direct_escape not_returned_directly
+  Analyzing stmt: _36 = MEM[(int *)a_11(D) + 4B];
+    Analyzing flags of ssa name: _36
+      Analyzing stmt: _39 = _36 + _38;
+        Analyzing flags of ssa name: _39
+          Analyzing stmt: MEM[(int *)a_11(D) + 4B] = _39;
+          ssa name saved to memory
+          current flags of _39
+        flags of ssa name _39
+      current flags of _36
+    flags of ssa name _36
+  current flags of a_11(D) no_direct_escape not_returned_directly
+  Analyzing stmt: MEM[(int *)a_11(D) + 4B] = _39;
+  current flags of a_11(D) no_direct_escape not_returned_directly
+  Analyzing stmt: *a_11(D) = _26;
+  current flags of a_11(D) no_direct_escape not_returned_directly
+  Analyzing stmt: _15 = *a_11(D);
+    Analyzing flags of ssa name: _15
+      Analyzing stmt: _26 = _8 + _15;
+        Analyzing flags of ssa name: _26
+          Analyzing stmt: *a_11(D) = _26;
+          ssa name saved to memory
+          current flags of _26
+        flags of ssa name _26
+      current flags of _15
+    flags of ssa name _15
+  current flags of a_11(D) no_direct_escape not_returned_directly
+flags of ssa name a_11(D) no_direct_escape not_returned_directly
+Analyzing flags of ssa name: b_12(D)
+  Analyzing stmt: _6 = MEM[(int *)b_12(D) + 12B];
+    Analyzing flags of ssa name: _6
+      Analyzing stmt: _7 = _4 + _6;
+      current flags of _6
+    flags of ssa name _6
+  current flags of b_12(D) no_direct_clobber no_direct_escape not_returned_directly
+  Analyzing stmt: _51 = MEM[(int *)b_12(D) + 8B];
+    Analyzing flags of ssa name: _51
+      Analyzing stmt: _52 = _49 + _51;
+      current flags of _51
+    flags of ssa name _51
+  current flags of b_12(D) no_direct_clobber no_direct_escape not_returned_directly
+  Analyzing stmt: _38 = MEM[(int *)b_12(D) + 4B];
+    Analyzing flags of ssa name: _38
+      Analyzing stmt: _39 = _36 + _38;
+      current flags of _38
+    flags of ssa name _38
+  current flags of b_12(D) no_direct_clobber no_direct_escape not_returned_directly
+  Analyzing stmt: _8 = *b_12(D);
+    Analyzing flags of ssa name: _8
+      Analyzing stmt: _26 = _8 + _15;
+      current flags of _8
+    flags of ssa name _8
+  current flags of b_12(D) no_direct_clobber no_direct_escape not_returned_directly
+flags of ssa name b_12(D) no_direct_clobber no_direct_escape not_returned_directly
+ - Analyzing load: *a_11(D)
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:0 offset:0 size:32 max_size:32
+ - Analyzing load: *b_12(D)
+   - Recording base_set=1 ref_set=1  Parm 1 param offset:0 offset:0 size:32 max_size:32
+ - Analyzing store: *a_11(D)
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:0 offset:0 size:32 max_size:32
+   - Recording kill
+ - Analyzing load: MEM[(int *)a_11(D) + 4B]
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:4 offset:0 size:32 max_size:32
+ - Analyzing load: MEM[(int *)b_12(D) + 4B]
+   - Recording base_set=1 ref_set=1  Parm 1 param offset:4 offset:0 size:32 max_size:32
+ - Analyzing store: MEM[(int *)a_11(D) + 4B]
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:4 offset:0 size:32 max_size:32
+   - Recording kill
+ - Analyzing load: MEM[(int *)a_11(D) + 8B]
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:8 offset:0 size:32 max_size:32
+ - Analyzing load: MEM[(int *)b_12(D) + 8B]
+   - Recording base_set=1 ref_set=1  Parm 1 param offset:8 offset:0 size:32 max_size:32
+ - Analyzing store: MEM[(int *)a_11(D) + 8B]
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:8 offset:0 size:32 max_size:32
+   - Recording kill
+ - Analyzing load: MEM[(int *)a_11(D) + 12B]
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:12 offset:0 size:32 max_size:32
+ - Analyzing load: MEM[(int *)b_12(D) + 12B]
+   - Recording base_set=1 ref_set=1  Parm 1 param offset:12 offset:0 size:32 max_size:32
+ - Analyzing store: MEM[(int *)a_11(D) + 12B]
+   - Recording base_set=1 ref_set=1  Parm 0 param offset:12 offset:0 size:32 max_size:32
+   - Recording kill
+ - modref done with result: tracked.
+  loads:
+      Base 0: alias set 1
+        Ref 0: alias set 1
+          access: Parm 0 param offset:0 offset:0 size:32 max_size:128
+          access: Parm 1 param offset:0 offset:0 size:32 max_size:128
+  stores:
+      Base 0: alias set 1
+        Ref 0: alias set 1
+          access: Parm 0 param offset:0 offset:0 size:32 max_size:128
+  kills:
+     Parm 0 param offset:0 offset:0 size:128 max_size:128
+  Try dse
+  parm 0 flags: no_direct_escape
+  parm 1 flags: no_direct_clobber no_direct_escape
+void vector_add (int * a, int * b)
+{
+  int i;
+  int _4;
+  int _6;
+  int _7;
+  int _8;
+  int _15;
+  int _26;
+  int _36;
+  int _38;
+  int _39;
+  int _49;
+  int _51;
+  int _52;
+
+  <bb 2> [local count: 214748371]:
+  _15 = *a_11(D);
+  _8 = *b_12(D);
+  _26 = _8 + _15;
+  *a_11(D) = _26;
+  _36 = MEM[(int *)a_11(D) + 4B];
+  _38 = MEM[(int *)b_12(D) + 4B];
+  _39 = _36 + _38;
+  MEM[(int *)a_11(D) + 4B] = _39;
+  _49 = MEM[(int *)a_11(D) + 8B];
+  _51 = MEM[(int *)b_12(D) + 8B];
+  _52 = _49 + _51;
+  MEM[(int *)a_11(D) + 8B] = _52;
+  _4 = MEM[(int *)a_11(D) + 12B];
+  _6 = MEM[(int *)b_12(D) + 12B];
+  _7 = _4 + _6;
+  MEM[(int *)a_11(D) + 12B] = _7;
+  return;
+
+}
+
+

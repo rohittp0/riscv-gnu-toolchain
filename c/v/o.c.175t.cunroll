@@ -1,0 +1,146 @@
+
+;; Function vector_add (vector_add, funcdef_no=0, decl_uid=1454, cgraph_uid=1, symbol_order=0)
+
+Removing basic block 13
+Removing basic block 14
+Removing basic block 15
+
+SSA replacement table
+N_i -> { O_1 ... O_j } means that N_i replaces O_1, ..., O_j
+
+_8 -> { _6 }
+_9 -> { _5 }
+_15 -> { _4 }
+_16 -> { _3 }
+_19 -> { _2 }
+i.0_20 -> { i.0_1 }
+ivtmp_21 -> { ivtmp_25 }
+.MEM_22 -> { .MEM_18 }
+i_23 -> { i_17 }
+_26 -> { _7 }
+.MEM_27 -> { .MEM_13 }
+i_28 -> { i_14 }
+ivtmp_29 -> { ivtmp_24 }
+i_30 -> { i_17 }
+.MEM_31 -> { .MEM_18 }
+ivtmp_32 -> { ivtmp_25 }
+i.0_33 -> { i.0_1 }
+_34 -> { _2 }
+_35 -> { _3 }
+_36 -> { _4 }
+_37 -> { _5 }
+_38 -> { _6 }
+_39 -> { _7 }
+.MEM_40 -> { .MEM_13 }
+i_41 -> { i_14 }
+ivtmp_42 -> { ivtmp_24 }
+i_43 -> { i_17 }
+.MEM_44 -> { .MEM_18 }
+ivtmp_45 -> { ivtmp_25 }
+i.0_46 -> { i.0_1 }
+_47 -> { _2 }
+_48 -> { _3 }
+_49 -> { _4 }
+_50 -> { _5 }
+_51 -> { _6 }
+_52 -> { _7 }
+.MEM_53 -> { .MEM_13 }
+i_54 -> { i_14 }
+ivtmp_55 -> { ivtmp_24 }
+Incremental SSA update started at block: 6
+Number of blocks in CFG: 16
+Number of blocks to update: 8 ( 50%)
+
+
+Removing basic block 5
+Removing basic block 12
+Merging blocks 2 and 6
+Removing basic block 7
+Removing basic block 9
+Removing basic block 11
+Merging blocks 2 and 8
+Merging blocks 2 and 10
+Merging blocks 2 and 3
+Merging blocks 2 and 4
+void vector_add (int * a, int * b)
+{
+  int i;
+  unsigned int i.0_1;
+  unsigned int _2;
+  int * _3;
+  int _4;
+  int * _5;
+  int _6;
+  int _7;
+  int _8;
+  int * _9;
+  int _15;
+  int * _16;
+  unsigned int _19;
+  unsigned int i.0_20;
+  unsigned int ivtmp_24;
+  int _26;
+  unsigned int ivtmp_29;
+  unsigned int i.0_33;
+  unsigned int _34;
+  int * _35;
+  int _36;
+  int * _37;
+  int _38;
+  int _39;
+  unsigned int ivtmp_42;
+  unsigned int i.0_46;
+  unsigned int _47;
+  int * _48;
+  int _49;
+  int * _50;
+  int _51;
+  int _52;
+  unsigned int ivtmp_55;
+
+  <bb 2> [local count: 214748371]:
+  i.0_20 = 0;
+  _19 = i.0_20 * 4;
+  _16 = a_11(D) + _19;
+  _15 = *_16;
+  _9 = b_12(D) + _19;
+  _8 = *_9;
+  _26 = _15 + _8;
+  *_16 = _26;
+  i_28 = 1;
+  ivtmp_29 = 3;
+  i.0_33 = (unsigned int) i_28;
+  _34 = i.0_33 * 4;
+  _35 = a_11(D) + _34;
+  _36 = *_35;
+  _37 = b_12(D) + _34;
+  _38 = *_37;
+  _39 = _36 + _38;
+  *_35 = _39;
+  i_41 = i_28 + 1;
+  ivtmp_42 = ivtmp_29 + 4294967295;
+  i.0_46 = (unsigned int) i_41;
+  _47 = i.0_46 * 4;
+  _48 = a_11(D) + _47;
+  _49 = *_48;
+  _50 = b_12(D) + _47;
+  _51 = *_50;
+  _52 = _49 + _51;
+  *_48 = _52;
+  i_54 = i_41 + 1;
+  ivtmp_55 = ivtmp_42 + 4294967295;
+  i.0_1 = (unsigned int) i_54;
+  _2 = i.0_1 * 4;
+  _3 = a_11(D) + _2;
+  _4 = *_3;
+  _5 = b_12(D) + _2;
+  _6 = *_5;
+  _7 = _4 + _6;
+  *_3 = _7;
+  i_14 = i_54 + 1;
+  ivtmp_24 = ivtmp_55 + 4294967295;
+  return;
+
+}
+
+
