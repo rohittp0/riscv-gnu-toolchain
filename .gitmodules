@@ -5,7 +5,7 @@
 [submodule "gcc"]
 	path = gcc
 	url = git@github.com:rohittp0/gcc.git
-	branch = rohit-vector
+	branch = rohit-vector-early
 [submodule "glibc"]
 	path = glibc
 	url = https://sourceware.org/git/glibc.git
